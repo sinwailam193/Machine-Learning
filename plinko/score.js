@@ -15,8 +15,8 @@ function splitDateset(data, testCount) {
 function knn(data, distancePoint) {
     return _.chain(data)
         .map(([dropPosition, bounciness, size, bucketLabel]) => [
-          distance(dropPosition, distancePoint),
-          bucketLabel
+            distance(dropPosition, distancePoint),
+            bucketLabel
         ])
         .sortBy(row => row[0])
         .slice(0, k)

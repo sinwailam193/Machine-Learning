@@ -294,12 +294,12 @@ function updateBucketColors(_score) {
     .value();
 }
 
-document.querySelector('#reset').addEventListener('click', function() {
+document.querySelector('#reset').addEventListener('click', function () {
   try {
     while (outputs.length) {
       outputs.pop();
     }
-  } catch (e) {}
+  } catch (e) { }
 
   _.range(0, 10).forEach(i => {
     buckets[i * 2].render.fillStyle = BUCKET_COLOR;
